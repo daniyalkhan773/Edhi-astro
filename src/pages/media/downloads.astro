@@ -1,0 +1,57 @@
+---
+import Base from "@/layouts/Base.astro";
+import { markdownify } from "@/lib/utils/textConverter";
+import { getEntry } from "astro:content";
+
+const downloads = await getEntry("downloads", "-index");
+const { Content } = await downloads.render();
+const { title, description, meta_title } = downloads.data;
+---
+
+<Base title={title} meta_title={meta_title} description={description}>
+  <section class="section-sm">
+    <div
+      class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
+    >
+      <h2
+        class="mb-4 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none text-center"
+        style="margin-top: -60px;margin-bottom:30px;"
+      >
+        Downloads
+      </h2>
+
+      <p class="mb-2 text-xs font-bold tracking-wide text-gray-800 uppercase">
+        Child Adoption Center and Child-care services
+      </p>
+      <p class="text-base text-gray-700">
+        Established in 1949, and headed by Abdul Sattar Edhi’s wife Bilquis
+        Edhi, the Foundation has installed baby cradles at most of Edhi centers.
+        This cradle service ensures refuge for unwanted infants and abandoned
+        babies. These babies are then taken care of at the Edhi homes under the
+        supervision of Bilquis Edhi. <a
+          target="_blank"
+          href="https://edhiuk.org/">read more »»</a
+        >
+        <br />
+        <br />
+        <p class="text-base text-gray-700" style="text-align:left">
+          <!-- To see the complete list <a target="_blank" href="https://edhiuk.org/">CLICK HERE</a>
+                    <br /> -->
+
+          Click Here to Download Child Adoption Form in Urdu <a
+            target="_blank"
+            href="https://edhiuk.org/wp-content/uploads/2017/08/Child_Adoption_Form_in_urdu.pdf" 
+            class="text-red-500">CLICK HERE</a
+          >
+          <br />
+           Click Here to Download Child Adoption Form in English <a
+            target="_blank"
+            href="https://edhiuk.org/wp-content/uploads/2017/08/Child_Adoption_From_in_English.pdf"
+            class="text-red-500">CLICK HERE</a
+          >
+          <br />
+        </p>
+      </p>
+    </div>
+  </section>
+</Base>

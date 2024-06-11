@@ -1,0 +1,25 @@
+---
+import Video from "@/shortcodes/Video";
+interface Video {
+  title: string;
+  width: number | "100%";
+  height: number | "auto";
+  src: string;
+  class: string;
+}
+---
+
+<!-- secound section -->
+<div class="container mx-auto flex flex-col items-center justify-center p-4 space-y-8 md:p-10 md:px-24 xl:px-48">
+    <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8 ">
+      <div class=" bg-gray-200" ><img
+        alt="flood-relief-campaign-1"
+        src="/images/flood-relief-campaign-1.jpg"
+        class="h-56 w-full object-cover sm:h-full"
+      /></div>
+      <div class="  bg-gray-200 lg:col-span-2">
+        <Video class="rounded-none"
+        width={"100%"}
+        src="https://edhiuk.org/wp-content/uploads/2021/04/WhatsApp-Video-2021-04-09-at-4.34.19-PM.mp4"
+      /></div>
+    </div>

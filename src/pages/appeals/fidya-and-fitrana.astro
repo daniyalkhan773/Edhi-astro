@@ -1,0 +1,306 @@
+---
+import Base from "@/layouts/Base.astro";
+import { markdownify } from "@/lib/utils/textConverter";
+import { getEntry } from "astro:content";
+import Accordion from "@/shortcodes/Accordion";
+import Donationcard from "../../layouts/components/donationcard.astro";
+import Aboutedhi from "@/components/Aboutedhi.astro";
+
+const fidyaandfitrana = await getEntry(
+  "fidya-and-fitrana",
+  "-index",
+);
+const { Content } = await fidyaandfitrana.render(); 
+const { title, description, meta_title } = fidyaandfitrana.data;
+---
+
+<Base title={title} meta_title={meta_title} description={description}>
+   <!-- heading started here -->
+   <section class="min-h-max bg-white dark:bg-gray-950">
+    <div class="absolute top-0 inset-x-0 h-64 flex items-start">
+      <div
+        class="h-24 w-2/3 bg-gradient-to-br from-green-500 opacity-20 blur-2xl dark:from-green-500 dark:invisible dark:opacity-40"
+      >
+      </div>
+      <div
+        class="h-20 w-3/5 bg-gradient-to-r from-green-500 opacity-40 blur-2xl dark:from-green-500 dark:opacity-40"
+      >
+      </div>
+    </div>
+    <div
+      class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-2/5 aspect-[2/0.5] bg-gradient-to-br from-green-500 to-green-500 rounded-full opacity-50 blur-2xl"
+    >
+    </div>
+    <div
+      class="relative mx-auto pt-32 pb-24 lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5 text-center space-y-10"
+    >
+      <h1
+        class="text-gray-900 dark:text-white mx-auto max-w-5xl font-bold text-4xl/tight sm:text-5xl/tight lg:text-6xl/tight xl:text-7xl/tight"
+      >
+      Fidya and Fitrana      </h1>
+      <p class="text-gray-700 dark:text-gray-300 mx-auto max-w-2xl">
+        Join Edhi Foundation's Fidya and Fitrana Program to extend compassion and support to those in need during Ramadan.
+      </p>
+      <div class="flex justify-center items-center flex-wrap mx-auto gap-4">
+        <a
+          href="https://edhi-donate.tscube.co.in/"
+          class="flex items-center h-12 px-6 rounded bg-green-600 text-white border border-green-500"
+        >
+          Donate Now
+        </a>
+        <a
+          href="#"
+          class="flex items-center h-12 px-6 pl-10 pr-10 rounded bg-gray-100 dark:bg-gray-900 text-black dark:text-gray-300 border border-black dark:border-gray-800"
+        >
+          Sign Up
+        </a>
+      </div>
+    </div>
+  </section>,
+  <!-- heading ended here -->
+  <Donationcard programId={[14,15]} />
+
+  <!-- providings start here -->
+  <section>
+    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+      <div class="grid gap-5 row-gap-8 lg:grid-cols-2">
+        <div class="flex flex-col justify-center">
+          <div class="max-w-xl mb-6">
+            <h2
+              class="max-w-lg font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none"
+            >
+              What is <span class="text-green-700">Fidya and Fitrana?</span>
+              <br class="hidden md:block" />
+              <span class="relative px-1">
+                <div
+                  class="absolute inset-x-0 bottom-0 h-3 transform -skew-x-12 bg-teal-accent-400"
+                >
+                </div>
+              </span>
+            </h2>
+            <p class="text-[17px] text-gray-700 md:text-lg font-roboto">
+              Fidya and Fitrana are charitable contributions made during Ramadan by Muslims who are unable to fast due to illness, pregnancy, or other reasons. Fidya is a form of compensation for missed fasts, while Fitrana is a donation given before Eid al-Fitr to help the less fortunate celebrate the festival. These contributions aim to fulfill religious obligations and support those in need during the holy month.
+            </p>
+          </div>
+          <div class="grid gap-5 row-gap-8 sm:grid-cols-2">
+            <div
+              class="bg-white border-l-4 border-green-500 shadow-sm border-deep-purple-accent-400"
+            >
+              <div class="h-full p-5 border border-l-0 rounded-r">
+                <p class="text-sm
+                   text-gray-900 font-roboto">
+                   Fidya is paid for each missed fast and typically involves providing food for those in need, while Fitrana is a donation given before Eid al-Fitr.
+                </p>
+              </div>
+            </div>
+            <div
+              class="bg-white border-l-4 border-green-500 shadow-sm border-deep-purple-accent-400"
+            >
+              <div class="h-full p-5 border border-l-0 rounded-r">
+                <p class="text-sm font-roboto text-gray-900">
+                  Both Fidya and Fitrana serve as acts of charity and gratitude, ensuring that everyone can participate in the blessings of Ramadan.
+                </p>
+              </div>
+            </div>
+          </div>
+          <br />
+          <div class="text-center">
+            <a
+              href="https://edhi-donate.tscube.co.in/"
+              class="flex justify-center items-center h-12 px-6 rounded-md bg-green-600 text-white border border-green-500"
+            >
+              Donate Now
+            </a>
+          </div>
+        </div>
+        <div class="pt-20">
+          <img
+            class="object-cover w-full h-100 rounded shadow-lg sm:h-30rem mt-6"
+            src="/images/appeals/fidya-1.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+  <br /><br />
+
+  <!-- providings ended here -->
+  <!-- section-1 area started -->
+  <section class="text-center px-8">
+    <h1 class="text-green-700 text-4xl font-bold">
+      Significance of Contributing to Fidya and Fitrana    </h1>
+    <br />
+    <div class="sm:grid-cols-1">
+      <div class="text-center mb-4">
+        <p class="text-[17px] font-roboto">
+          Contributing to Fidya and Fitrana programs is vital for fulfilling religious obligations and supporting the less fortunate during Ramadan.
+        </p><br />
+        <div class="border-b-8 border-red-600 w-64 mx-auto my-2 rounded-md">
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row pt-4">
+        <div class="w-full md:w-1/2 border-r-4 border-green-500 pr-4">
+          <p class="text-gray-700 text-justify text-[17px] font-roboto">
+            When you give Fidya and Fitrana, you fulfill religious duties by compensating for missed fasts and aiding those unable to celebrate Eid al-Fitr. Your generosity ensures that everyone, regardless of circumstances, can partake in the blessings of Ramadan.<br /><br /> Furthermore, Fidya and Fitrana foster a sense of community and solidarity among Muslims worldwide. By coming together to support one another, individuals strengthen bonds of compassion and unity, embodying the spirit of Ramadan. <br
+            /><br />
+            Giving Fidya and Fitrana also cultivates gratitude and humility within individuals. Through charitable acts, Muslims express thankfulness for their blessings and acknowledge their responsibility to help those less fortunate.
+          </p>
+        </div>
+        <div class="w-full md:w-1/2 pl-4">
+          <h5 class="text-green-700 font-bold text-justify pb-2">
+            The Prophet (saw) said that “The Believers Shade On The Day Of Resurrection Will Be His Sadaqah” (Hadith Tirmidhi)
+          </h5>
+          <p class="text-gray-700 text-justify text-[17px] font-roboto">
+            Moreover, contributing to Fidya and Fitrana programs offers immense spiritual rewards. According to Islamic teachings, acts of charity during Ramadan are multiplied manifold, leading to increased blessings and forgiveness from Allah.<br
+            /><br /> In conclusion, giving Fidya and Fitrana is not only a religious obligation but also a means of expressing compassion, fostering community, cultivating gratitude, and earning spiritual rewards during the sacred month of Ramadan.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>  
+  <br /><br /><br /><br /><br />
+
+  <!-- section-1 area ended -->
+
+  <!-- section-2 area started -->
+<section>
+  <h1 class="text-3xl font-bold flex justify-center">
+    Steps for Giving&nbsp; <span class="text-green-700">  Fidya and Fitrana</span>
+     </h1>
+    <br />
+
+  <div class="text-center pb-6 mb-4">
+    <p class="text-[17px] font-roboto">
+      Ensure timely calculation and donation of Fidya for missed fasts and Fitrana before Eid al-Fitr to support those in need during Ramadan.
+    </p>
+  </div>
+  <div class="border border-gray-300 p-4 pb-4 pt-6">
+    <div class="flex flex-wrap -mx-4">
+      <div class="w-full md:w-1/3 pl-2 pr-2 mb-4">
+        <div class="border border-gray-300 p-4 md:w-full h-60 pl-8 shadow-[0_10px_15px_-3px_rgba(0,0,0,0.1)] transition hover:border-green-500 hover:shadow-green-400">
+          <h6>
+            <span class="text-green-700">Calculate Missed</span>&nbsp;Fasts
+          </h6><br />
+          <p class="font-roboto">
+            Determine the number of missed fasts during Ramadan due to illness, pregnancy, or other reasons to calculate Fidya, ensuring a comprehensive assessment of the missed days.
+
+          </p>
+          <a href="" class="transition hover:border-green-500 hover:shadow-green-400"></a>
+        </div>
+      </div>
+      <div class="w-full md:w-1/3 pl-2 pr-2 mb-4">
+        <div class="border border-gray-300 p-4 md:w-full h-60 shadow-lg transition hover:border-green-500 hover:shadow-green-400">
+          <h6>
+            <span class="text-green-700">Contribute </span>&nbsp;Fidya
+          </h6><br />
+          <p class="font-roboto">
+            Give Fidya by providing food or its equivalent value to those in need for each missed fast, exemplifying the spirit of compassion and solidarity.
+
+          </p>
+        </div>
+      </div>
+      <div class="w-full md:w-1/3 pl-2 pr-2 mb-4">
+        <div class="border border-gray-300 p-4 md:w-full h-60 shadow-lg transition hover:border-green-500 hover:shadow-green-400">
+          <h6>
+            <span class="text-green-700">Calculate </span>&nbsp;Fitrana
+          </h6><br />
+          <p class="font-roboto">
+            Calculate Fitrana as a set amount per person in the household to be given before Eid al-Fitr, recognizing the collective responsibility of supporting the less fortunate.
+          </p>
+        </div>
+      </div>
+      <div class="w-full md:w-1/3 pl-2 pr-2 mb-4">
+        <div class="border border-gray-300 p-4 md:w-full h-60 shadow-lg transition hover:border-green-500 hover:shadow-green-400">
+          <h6>
+            <span class="text-green-700">Make the </span>&nbsp;Donation
+          </h6>
+          <br>
+          <p class="font-roboto">
+            Donate the calculated amount for Fidya and Fitrana to trusted organizations or directly to the needy, ensuring the funds reach those who need it most.
+          </p>
+        </div>
+      </div>
+      <div class="w-full md:w-1/3 pl-2 pr-2 mb-4">
+        <div class="border border-gray-300 p-4 md:w-full h-60 shadow-lg transition hover:border-green-500 hover:shadow-green-400">
+          <h6>
+            <span class="text-green-700">Ensure Timely </span>&nbsp;Giving
+          </h6><br />
+          <p class="font-roboto">
+            Ensure Fidya and Fitrana donations are given before the end of Ramadan to fulfill religious obligations, contributing to the welfare of the community in a timely manner.
+          </p>
+        </div>
+      </div>
+      <div class="w-full md:w-1/3 pl-2 pr-2 mb-4">
+        <div class="border border-gray-300 p-4 md:w-full h-60 shadow-lg transition hover:border-green-500 hover:shadow-green-400">
+          <h6>
+            <span class="text-green-700">Spread the </span>&nbsp;Word
+          </h6><br />
+          <p class="font-roboto">
+            Encourage others to participate in Fidya and Fitrana programs, spreading the blessings of Ramadan to those in need, and creating a ripple effect of kindness and generosity in the community.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</section>
+      <!-- section-2 area ended -->
+      <!-- section-3 area started -->
+
+      <Aboutedhi />
+
+      <!-- section-3 area ended -->
+      <!-- faq started -->
+      <section class="text-center pt-36">
+        <h1 class="text-3xl font-bold mb-6 text-center">
+          Frequently Asked Questions
+        </h1>
+        <h6>
+          Explore our FAQs for clear insights on giving, eligibility, and the
+          positive impact <br /> your contribution can make in transforming lives.
+        </h6>
+      </section>
+      <section class="section-sm container max-w-2xl">
+        <!-- ### Accordion -->
+  
+        <Accordion
+          className="text-justify"
+          client:load
+          title="How does the Edhi Foundation administer the Fidya program?"
+        >
+          <p class="font-roboto">
+            The Edhi Foundation collects donations from individuals intending to fulfill their Fidya obligation. These donations are used to provide food to those in need, ensuring they receive sustenance during Ramadan.          </p>
+        </Accordion>
+        <Accordion
+          className="text-justify"
+          client:load
+          title="Who is eligible to receive Fidya assistance from the Edhi Foundation?"
+        >
+          <p class="font-roboto">
+            The Edhi Foundation distributes Fidya assistance to individuals and families facing economic hardship, ensuring that they have access to food during Ramadan and can observe the month with dignity.
+          </p>
+        </Accordion>
+        <Accordion
+          className="text-justify"
+          client:load
+          title="How does the Edhi Foundation administer the Fitrana program?"
+        >
+          <p class="font-roboto">
+            The Edhi Foundation collects Fitrana donations from Muslims intending to fulfill their obligation before Eid prayer. These donations are used to provide food to disadvantaged individuals and families, allowing them to celebrate Eid with joy and dignity.
+          </p>
+        </Accordion>
+        <Accordion
+          className="text-justify"
+          client:load
+          title="Can individuals donate Fidya or Fitrana to the Edhi Foundation online?"
+        >
+          <p>
+            Yes, the Edhi Foundation provides online platforms for individuals to donate Fidya or Fitrana conveniently. Donors can visit the official website or use designated online donation portals to contribute to these programs.
+          </p>
+        </Accordion>
+      </section>
+
+      <!-- faq ended -->
+      
+</Base>

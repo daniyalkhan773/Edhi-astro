@@ -1,0 +1,266 @@
+{
+  "main": [
+    {
+      "name": "HOME",
+      "url": "/"
+    },
+    {
+      "name": "ABOUT US",
+      "url": "/about-us",
+
+      "hasChildren": true,
+      "children": [
+        {
+          "name": "About Edhi Foundation",
+          "url": "/about-edhi-foundation"
+        },
+        {
+          "name": "Bilquis Bano Edhi",
+          "url": "/bilquis-bano"
+        },
+        
+        {
+          "name": "Our History",
+          "url": "/our-history"
+        },
+        {
+          "name": "Founder Profile",
+          "url": "/founder-profile"
+        }
+        
+        
+      
+        
+       
+    
+      ]
+    },
+   
+      {
+        "name": "QURBANI 2024",
+        "url": "/appeals",
+
+
+        "hasChildren": true,
+        "children": [
+          
+      
+          {
+
+            "name": "Qurbani Program",
+            "url": "/qurbani-program"
+          },{
+            "name": "Online Qurbani Service",
+            "url": "/online-quarbani-service"
+          }
+        ]
+        },
+
+    {
+      "name": "APPEALS",
+      "url": "/appeals",
+      "hasChildren": true,
+      "children": [
+        {
+          "name": "Sadaqah Program",
+          "url": "/sadaqah"
+        },
+        {
+          "name": "Zakat Appeal",
+          "url": "/zakat"
+        },
+        {
+          "name": "Fidya Program",
+          "url": "/fidya-and-fitrana"
+        },
+        {
+          "name": "Aqeeqa",
+          "url": "/aqeeqa"
+        },
+        {
+          "name": "Food Bank Appeal",
+          "url": "/food-bank"
+        },
+       
+        {
+          "name": "Lillah (In The Name of Allah) Program",
+          "url": "/lillah-program"
+        },
+
+        {
+          "name": "Emergency Services Program",
+          "url": "/emergency-services-program"
+        }
+      
+        
+        
+       
+      ]
+    },
+
+    {
+      "name": "SERVICES",
+      "url": "/services",
+      "hasChildren": true,
+      "children": [
+        
+        {
+          "name": "Ambulance Service",
+          "url": "/ambulance-service"
+        },
+        {
+          "name": "Hospital",
+          "url": "/hospital"
+        },
+        {
+          "name": "Children Services",
+          "url": "/children-services"
+        },
+        {
+          "name": "Edhi Homes orphanage",
+          "url": "/homes-orphanage"
+        },
+        {
+          "name": "Educational Services",
+          "url": "/educational-services"
+        },
+        {
+          "name": "Graveyard",
+          "url": "/graveyard"
+        },
+        {
+          "name": "Missing Person Services",
+          "url": "/missing-person-services"
+        },
+        {
+          "name": "Refugees Assistance",
+          "url": "/refugees-assistance"
+        },
+        {
+          "name": "Honorary & Voulantry Service",
+          "url": "/honorary-volantry-service"
+        },
+        {
+          "name": "Marriage Bureau Service",
+          "url": "/marriage-bureau-service"
+        },
+        {
+          "name": "Covid 19 Assistance",
+          "url": "/covid-19-assistance"
+        }
+      ]
+    },
+
+
+
+    {
+      "name": "ACTIVITIES",
+      "url": "/activities",
+      "hasChildren": true,
+      "children": [
+        {
+          "name": "Destitue Homes",
+          "url": "/destitue-homes"
+        },
+        {
+          "name": "High Ways Project",
+          "url": "/high-ways-project"
+        },
+        {
+          "name": "International Communtiy Centers",
+          "url": "/international-community-centers"
+        },
+        {
+          "name": "Collaboration with other Organizations",
+          "url": "/collaboration-with-other-organizations"
+        },
+        {
+          "name": "International Activities",
+          "url": "/international-activities"
+        }
+        
+      ]
+    },
+
+    {
+      "name": "MEDIA",
+      "url": "/media",
+      "hasChildren": true,
+      "children": [
+        {
+          "name": "Image Galleries",
+          "url": "/image-galleries"
+        },
+        {
+          "name": "Videos",
+          "url": "/videos"
+        },
+        {
+          "name": "Downloads",
+          "url": "/downloads"
+        }
+      ]
+    },
+
+   
+    {
+      "name": "CONTACT US",
+      "url": "/contact-us",
+      "hasChildren": true,
+      "children": [
+        {
+          "name": "Networks",
+          "url": "/networks"
+        },
+        {
+          "name": "United Kingdom",
+          "url": "/united-kingdom"
+        },
+        {
+          "name": "All Pakistani Edhi Centers",
+          "url": "/all-pakistani-edhi-centers"
+        },
+        {
+          "name": "International Offices",
+          "url": "/international-offices"
+        }
+      ]
+    }
+  ],
+
+  "footer": [
+    
+    {
+      "name": "Networks",
+      "url": "/contact-us/networks"
+    },
+    {
+      "name": "United Kingdom",
+      "url": "/contact-us/united-kingdom"
+    },
+    {
+      "name": "All Pakistani Edhi Centers",
+      "url": "/contact-us/all-pakistani-edhi-centers"
+    },
+    {
+      "name": "International Offices",
+      "url": "/contact-us/international-offices"
+    }
+  ],
+  
+  "footerAbout": [
+    {
+      "name": "About Edhi Foundation",
+      "url": "about-us/about-edhi-foundation"
+    },
+    {
+      "name": "Bilquis Bano Edhi",
+      "url": "about-us/bilquis-bano"
+    },
+
+    {
+      "name": "Founder Profile",
+      "url": "about-us/founder-profile"
+    }
+  ]
+}

@@ -1,0 +1,561 @@
+---
+import Base from "@/layouts/Base.astro";
+import { markdownify } from "@/lib/utils/textConverter";
+import { getEntry } from "astro:content";
+const imagegalleries = await getEntry("image-galleries", "-index");
+const { Content } = await imagegalleries.render();
+const { title, description, meta_title } = imagegalleries.data;
+---
+
+<Base title={title} meta_title={meta_title} description={description}>
+ <!-- <section>
+  <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+  <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+   
+    <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto text-center">
+      
+     
+Image Gallary    </h2>
+    <p class="text-[17px] text-gray-700 md:text-lg font-roboto">
+      Explore the compassionate work of Edhi Foundation through our captivating image gallery, showcasing moments of humanitarian aid and community support.    </p>
+  </div>
+  <div class="grid max-w-screen-lg gap-8 row-gap-5 mb-8 sm:grid-cols-2 lg:grid-cols-4 sm:mx-auto">
+    <img class="object-cover w-full h-56 rounded shadow-lg" src="/images/bilquis-gal-3.jpg"src="/images/bilquis-gal-3.jpg" alt="" />
+    <img class="object-cover w-full h-56 rounded shadow-lg" src="/images/qurbani/qurbani-services-2.jpg" alt="" />
+    <img class="object-cover w-full h-56 rounded shadow-lg" src="/images/orphan/orphan-2.jpg" alt="" />
+    <img class="object-cover w-full h-56 rounded shadow-lg" src="/images/education/education-4.jpg" alt="" />
+    <img class="object-cover w-full h-56 rounded shadow-lg" src="/images/refugee-assistance/refugee-assistance-2.jpg" alt="" />
+    <img class="object-cover w-full h-56 rounded shadow-lg" src="/images/ambulance/ambulance-01.jpg" alt="" />
+    <img class="object-cover w-full h-56 rounded shadow-lg" src="/images/graveyard/graveyard-1.jpg" alt="" />
+    <img class="object-cover w-full h-56 rounded shadow-lg" src="/images/education/banner-bg.jpg" alt="" />
+    <img class="object-cover w-full h-56 rounded shadow-lg" src="/images/appeals/sadaqah-1.jpg" alt="" />
+    <img class="object-cover w-full h-56 rounded shadow-lg" src="/images/qurbani/qurbani-services-3.jpg" alt="" />
+    <img class="object-cover w-full h-56 rounded shadow-lg" src="/images/orphan/orphan-3.jpg" alt="" />
+    <img class="object-cover w-full h-56 rounded shadow-lg" src="/images/education/education-1.jpg" alt="" />
+    <img class="object-cover w-full h-56 rounded shadow-lg" src="/images/refugee-assistance/refugee-assistance-1.jpg" alt="" />
+    <img class="object-cover w-full h-56 rounded shadow-lg" src="/images/graveyard/graveyard-2.jpg" alt="" />
+    <img class="object-cover w-full h-56 rounded shadow-lg" src="/images/graveyard/graveyard-3.jpg" alt="" />
+    <img class="object-cover w-full h-56 rounded shadow-lg" src="/images/education/banner-bg.jpg" alt="" />
+    <img class="object-cover w-full h-56 rounded shadow-lg" src="/images/bilquis-gal-1.jpg" alt="" />
+    <img class="object-cover w-full h-56 rounded shadow-lg" src="/images/qurbani/qurbani-services-1.jpg" alt="" />
+    <img class="object-cover w-full h-56 rounded shadow-lg" src="/images/orphan/orphan-1.jpg" alt="" />
+    <img class="object-cover w-full h-56 rounded shadow-lg" src="/images/appeals/lillah-1.jpg" alt="" />
+    <img class="object-cover w-full h-56 rounded shadow-lg" src="/images/appeals/food-bank-1.jpg" alt="" />
+    <img class="object-cover w-full h-56 rounded shadow-lg" src="/images/covid-19/covid-19-1.jpg" alt="" />
+    <img class="object-cover w-full h-56 rounded shadow-lg" src="/images/covid-19/covid-19-2.jpg" alt="" />
+    <img class="object-cover w-full h-56 rounded shadow-lg" src="/images/covid-19/covid-19-3.jpg" alt="" />
+
+  </div>
+ 
+</div>
+</section> -->
+
+
+<!-- <section class="max-w-7xl m-auto"> -->
+
+<div class="pt-20">
+<div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12" >
+   
+  <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto text-center">
+    
+   
+Donate Ambulance    </h2>
+  <p class="text-[17px] text-gray-700 md:text-lg font-roboto">
+    Explore the compassionate work of Edhi Foundation through our captivating image gallery, showcasing moments of humanitarian aid and community support.    </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
+ 
+  <div class="group cursor-pointer relative shadow-xl transition hover:border-green-500 hover:shadow-green-400">
+    <img
+      src="/images/ambulance/ambulance-gal-1.jpg"
+      alt="Image 1"
+      class="w-full h-48 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
+    />
+    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+     
+    </div>
+  </div>
+  <div class="group cursor-pointer relative shadow-xl transition hover:border-green-500 hover:shadow-green-400">
+    <img
+      src="/images/ambulance/ambulance-gal-2.jpeg"
+      alt="Image 1"
+      class="w-full h-48 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
+    />
+    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+     
+    </div>
+  </div>
+  <div class="group cursor-pointer relative shadow-xl transition hover:border-green-500 hover:shadow-green-400">
+    <img
+      src="/images/ambulance/ambulance-gal-3.jpeg"
+      alt="Image 1"
+      class="w-full h-48 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
+    />
+    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+     
+    </div>
+  </div>
+  <div class="group cursor-pointer relative shadow-xl transition hover:border-green-500 hover:shadow-green-400">
+    <img
+      src="/images/ambulance/ambulance-gal-4.jpeg"
+      alt="Image 1"
+      class="w-full h-48 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
+    />
+    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+     
+    </div>
+  </div>
+  <div class="group cursor-pointer relative shadow-xl transition hover:border-green-500 hover:shadow-green-400">
+    <img
+      src="/images/ambulance/ambulance-01.jpg"
+      alt="Image 1"
+      class="w-full h-48 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
+    />
+    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+     
+    </div>
+  </div>
+  <div class="group cursor-pointer relative shadow-xl transition hover:border-green-500 hover:shadow-green-400">
+    <img
+      src="/images/ambulance/ambulance-02.jpg"
+      alt="Image 1"
+      class="w-full h-48 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
+    />
+    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+     
+    </div>
+  </div>
+  <div class="group cursor-pointer relative shadow-xl transition hover:border-green-500 hover:shadow-green-400">
+    <img
+      src="/images/ambulance/ambulance-03.jpg"
+      alt="Image 1"
+      class="w-full h-48 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
+    />
+    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+     
+    </div>
+  </div>
+  <div class="group cursor-pointer relative shadow-xl transition hover:border-green-500 hover:shadow-green-400">
+    <img
+      src="/images/ambulance/ambulance-05.jpg"
+      alt="Image 1"
+      class="w-full h-48 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
+    />
+    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+     
+    </div>
+  </div>
+ 
+
+
+
+  <!-- Repeat this div for each image -->
+</div>
+</div>
+<!-- </section> -->
+
+<div class="pt-20">
+<div   class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+   
+  <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto text-center">
+    
+   
+Edhi Ambulance Network</h2>
+  <p class="text-[17px] text-gray-700 md:text-lg font-roboto">
+    Explore the compassionate work of Edhi Foundation through our captivating image gallery, showcasing moments of humanitarian aid and community support.    </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
+ 
+  <div class="group cursor-pointer relative shadow-xl transition hover:border-green-500 hover:shadow-green-400">
+    <img
+      src="/images/ambulance/network-gal-1.JPG"
+      alt="Image 1"
+      class="w-full h-48 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
+    />
+    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+     
+    </div>
+  </div>
+  <div class="group cursor-pointer relative shadow-xl transition hover:border-green-500 hover:shadow-green-400">
+    <img
+      src="/images/ambulance/network-gal-2.JPG"
+      alt="Image 1"
+      class="w-full h-48 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
+    />
+    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+     
+    </div>
+  </div>
+  <div class="group cursor-pointer relative shadow-xl transition hover:border-green-500 hover:shadow-green-400">
+    <img
+      src="/images/ambulance/network-gal-3.jpg"
+      alt="Image 1"
+      class="w-full h-48 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
+    />
+    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+     
+    </div>
+  </div>
+  <div class="group cursor-pointer relative shadow-xl transition hover:border-green-500 hover:shadow-green-400">
+    <img
+      src="/images/ambulance/network-gal-4.jpg"
+      alt="Image 1"
+      class="w-full h-48 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
+    />
+    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+     
+    </div>
+  </div>
+  <div class="group cursor-pointer relative shadow-xl transition hover:border-green-500 hover:shadow-green-400">
+    <img
+      src="/images/ambulance/network-gal-5.jpg"
+      alt="Image 1"
+      class="w-full h-48 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
+    />
+    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+     
+    </div>
+  </div>
+  <div class="group cursor-pointer relative shadow-xl transition hover:border-green-500 hover:shadow-green-400">
+    <img
+      src="/images/ambulance/network-gal-6.jpg"
+      alt="Image 1"
+      class="w-full h-48 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
+    />
+    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+     
+    </div>
+  </div>
+  <div class="group cursor-pointer relative shadow-xl transition hover:border-green-500 hover:shadow-green-400">
+    <img
+      src="/images/ambulance/network-gal-7.jpg"
+      alt="Image 1"
+      class="w-full h-48 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
+    />
+    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+     
+    </div>
+  </div>
+  <div class="group cursor-pointer relative shadow-xl transition hover:border-green-500 hover:shadow-green-400">
+    <img
+      src="/images/ambulance/ambulance-service-04.jpg"
+      alt="Image 1"
+      class="w-full h-48 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
+    />
+    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+     
+    </div>
+  </div>
+ 
+
+
+
+  <!-- Repeat this div for each image -->
+</div>
+</div>
+<!-- Free kitchen gallary -->
+
+
+<div class="pt-20">
+<div   class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+   
+  <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto text-center">
+    
+   
+Edhi Free Kitchen</h2>
+  <p class="text-[17px] text-gray-700 md:text-lg font-roboto">
+    Explore the compassionate work of Edhi Foundation through our captivating image gallery, showcasing moments of humanitarian aid and community support.    </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
+ 
+  <div class="group cursor-pointer relative shadow-xl transition hover:border-green-500 hover:shadow-green-400">
+    <img
+      src="/images/gallery/kitchen-gal-1.jpg"
+      alt="Image 1"
+      class="w-full h-48 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
+    />
+    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+     
+    </div>
+  </div>
+  <div class="group cursor-pointer relative shadow-xl transition hover:border-green-500 hover:shadow-green-400">
+    <img
+      src="/images/gallery/kitchen-gal-2.jpg"
+      alt="Image 1"
+      class="w-full h-48 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
+    />
+    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+     
+    </div>
+  </div>
+  <div class="group cursor-pointer relative shadow-xl transition hover:border-green-500 hover:shadow-green-400">
+    <img
+      src="/images/gallery/kitchen-gal-3.jpg"
+      alt="Image 1"
+      class="w-full h-48 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
+    />
+    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+     
+    </div>
+  </div>
+  <div class="group cursor-pointer relative shadow-xl transition hover:border-green-500 hover:shadow-green-400">
+    <img
+      src="/images/gallery/kitchen-gal-4.jpg"
+      alt="Image 1"
+      class="w-full h-48 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
+    />
+    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+     
+    </div>
+  </div>
+  <div class="group cursor-pointer relative shadow-xl transition hover:border-green-500 hover:shadow-green-400">
+    <img
+      src="/images/gallery/kitchen-gal-5.jpg"
+      alt="Image 1"
+      class="w-full h-48 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
+    />
+    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+     
+    </div>
+  </div>
+  <div class="group cursor-pointer relative shadow-xl transition hover:border-green-500 hover:shadow-green-400">
+    <img
+      src="/images/gallery/kitchen-gal-6.jpg"
+      alt="Image 1"
+      class="w-full h-48 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
+    />
+    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+     
+    </div>
+  </div>
+  <div class="group cursor-pointer relative shadow-xl transition hover:border-green-500 hover:shadow-green-400">
+    <img
+      src="/images/gallery/kitchen-gal-7.jpg"
+      alt="Image 1"
+      class="w-full h-48 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
+    />
+    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+     
+    </div>
+  </div>
+  <div class="group cursor-pointer relative shadow-xl transition hover:border-green-500 hover:shadow-green-400">
+    <img
+      src="/images/gallery/kitchen-gal-8.jpg"
+      alt="Image 1"
+      class="w-full h-48 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
+    />
+    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+     
+    </div>
+  </div>
+ 
+
+
+
+  <!-- Repeat this div for each image -->
+</div>
+</div>
+<!-- Girl Education -->
+<div class="pt-20">
+<div   class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+   
+  <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto text-center">
+    
+   
+Edhi Home Girls Education</h2>
+  <p class="text-[17px] text-gray-700 md:text-lg font-roboto">
+    Explore the compassionate work of Edhi Foundation through our captivating image gallery, showcasing moments of humanitarian aid and community support.    </p> 
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
+ 
+  <div class="group cursor-pointer relative shadow-xl transition hover:border-green-500 hover:shadow-green-400">
+    <img
+      src="/images/gallery/girls-gal-1.JPG"
+      alt="Image 1"
+      class="w-full h-48 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
+    />
+    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+     
+    </div>
+  </div>
+  <div class="group cursor-pointer relative shadow-xl transition hover:border-green-500 hover:shadow-green-400">
+    <img
+      src="/images/gallery/girls-gal-2.JPG"
+      alt="Image 1"
+      class="w-full h-48 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
+    />
+    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+     
+    </div>
+  </div>
+  <div class="group cursor-pointer relative shadow-xl transition hover:border-green-500 hover:shadow-green-400">
+    <img
+      src="/images/gallery/girls-gal-3.JPG"
+      alt="Image 1"
+      class="w-full h-48 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
+    />
+    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+     
+    </div>
+  </div>
+  <div class="group cursor-pointer relative shadow-xl transition hover:border-green-500 hover:shadow-green-400">
+    <img
+      src="/images/gallery/girls-gal-4.JPG"
+      alt="Image 1"
+      class="w-full h-48 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
+    />
+    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+     
+    </div>
+  </div>
+  <div class="group cursor-pointer relative shadow-xl transition hover:border-green-500 hover:shadow-green-400">
+    <img
+      src="/images/gallery/girls-gal-5.JPG"
+      alt="Image 1"
+      class="w-full h-48 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
+    />
+    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+     
+    </div>
+  </div>
+  <div class="group cursor-pointer relative shadow-xl transition hover:border-green-500 hover:shadow-green-400">
+    <img
+      src="/images/gallery/girls-gal-6.JPG"
+      alt="Image 1"
+      class="w-full h-48 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
+    />
+    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+     
+    </div>
+  </div>
+  <div class="group cursor-pointer relative shadow-xl transition hover:border-green-500 hover:shadow-green-400">
+    <img
+      src="/images/gallery/girls-gal-7.JPG"
+      alt="Image 1"
+      class="w-full h-48 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
+    />
+    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+     
+    </div>
+  </div>
+  <div class="group cursor-pointer relative shadow-xl transition hover:border-green-500 hover:shadow-green-400">
+    <img
+      src="/images/gallery/girls-gal-8.JPG"
+      alt="Image 1"
+      class="w-full h-48 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
+    />
+    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+     
+    </div>
+  </div>
+ 
+
+
+
+  <!-- Repeat this div for each image --> 
+</div>
+</div>
+<!-- Marrine rescue gallary -->
+ <div class="pt-20">
+<div   class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+   
+  <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto text-center">
+    
+   
+Edhi Marrine Rescue Services</h2>
+  <p class="text-[17px] text-gray-700 md:text-lg font-roboto">
+    Explore the compassionate work of Edhi Foundation through our captivating image gallery, showcasing moments of humanitarian aid and community support.    </p> 
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
+ 
+  <div class="group cursor-pointer relative shadow-xl transition hover:border-green-500 hover:shadow-green-400">
+    <img
+      src="/images/gallery/marrine-gal-1.jpg"
+      alt="Image 1"
+      class="w-full h-48 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
+    />
+    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+     
+    </div>
+  </div>
+  <div class="group cursor-pointer relative shadow-xl transition hover:border-green-500 hover:shadow-green-400">
+    <img
+      src="/images/gallery/marrine-gal-2.jpg"
+      alt="Image 1"
+      class="w-full h-48 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
+    />
+    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+     
+    </div>
+  </div>
+  <div class="group cursor-pointer relative shadow-xl transition hover:border-green-500 hover:shadow-green-400">
+    <img
+      src="/images/gallery/marrine-gal-3.jpg"
+      alt="Image 1"
+      class="w-full h-48 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
+    />
+    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+     
+    </div>
+  </div>
+  <div class="group cursor-pointer relative shadow-xl transition hover:border-green-500 hover:shadow-green-400">
+    <img
+      src="/images/gallery/marrine-gal-4.jpg"
+      alt="Image 1"
+      class="w-full h-48 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
+    />
+    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+     
+    </div>
+  </div>
+  <div class="group cursor-pointer relative shadow-xl transition hover:border-green-500 hover:shadow-green-400">
+    <img
+      src="/images/gallery/marrine-gal-5.jpg"
+      alt="Image 1"
+      class="w-full h-48 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
+    />
+    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+     
+    </div>
+  </div>
+  <div class="group cursor-pointer relative shadow-xl transition hover:border-green-500 hover:shadow-green-400">
+    <img
+      src="/images/gallery/marrine-gal-6.jpg"
+      alt="Image 1"
+      class="w-full h-48 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
+    />
+    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+     
+    </div>
+  </div>
+  <div class="group cursor-pointer relative shadow-xl transition hover:border-green-500 hover:shadow-green-400">
+    <img
+      src="/images/gallery/marrine-gal-7.jpg"
+      alt="Image 1"
+      class="w-full h-48 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
+    />
+    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+     
+    </div>
+  </div>
+  <div class="group cursor-pointer relative shadow-xl transition hover:border-green-500 hover:shadow-green-400">
+    <img
+      src="/images/gallery/marrine-gal-8.jpg"
+      alt="Image 1"
+      class="w-full h-48 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
+    />
+    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+     
+    </div>
+  </div>
+ 
+
+
+
+  <!-- Repeat this div for each image --> 
+</div>
+</div>
+
+
+
+</Base>
