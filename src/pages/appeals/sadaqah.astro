@@ -85,10 +85,8 @@ import { SEO } from "astro-seo";
   <Donationcard programId={[29,30,31]} />
 
   <!-- providings start here -->
-  <section>
-    <div
-      class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
-    >
+  <section class="px-6 md:py-20 py-10 mx-auto max-w-6xl" >
+    <div>
       <div class="grid gap-5 row-gap-8 lg:grid-cols-2">
         <div class="flex flex-col justify-center">
           <div class="max-w-xl mb-6">
@@ -149,7 +147,7 @@ import { SEO } from "astro-seo";
             </a>
           </div>
         </div>
-        <div class="pt-20">
+        <div class="md:pt-20 pt-0">
           <img
             class="object-cover w-full h-100 rounded shadow-lg sm:h-30rem mt-6"
             src="/images/appeals/sadaqah-1.jpg"
@@ -159,11 +157,10 @@ import { SEO } from "astro-seo";
       </div>
     </div>
   </section>
-  <br /><br />
 
   <!-- providings ended here -->
   <!-- section-1 area started -->
-  <section class="text-center px-8">
+  <section class="text-center px-6 max-w-6xl mx-auto">
     <h2 class="text-green-700 text-4xl font-bold">
       Benefits of Sadaqah Donation to Edhi Foundation
     </h2>
@@ -196,7 +193,7 @@ import { SEO } from "astro-seo";
             bond among members of society
           </p>
         </div>
-        <div class="w-full md:w-1/2 pl-4">
+        <div class="w-full md:w-1/2 md:pl-4">
           <h5 class="text-green-700 font-bold text-justify pb-2">
             The Prophet (saw) said that “The Believers Shade On The Day Of
             Resurrection Will Be His Sadaqah” (Hadith Tirmidhi)
@@ -217,13 +214,13 @@ import { SEO } from "astro-seo";
       </div>
     </div>
   </section>
-  <section class="py-20">
-    <h2 class="text-3xl font-bold flex justify-center">
+  <section class="md:py-20 py-10  mx-auto max-w-6xl">
+    <h2 class="text-3xl font-bold flex justify-center px-6">
       Types of&nbsp; <span class="text-green-700"> Sadaqah</span>
     </h2>
     <br />
 
-    <div class="text-center pb-6 mb-4">
+    <div class="text-center pb-6 mb-4 px-6">
       <p class="text-[17px] font-roboto">
         Explore the concept in this section, covering various types like
         zakat, sadaqah jariyah, al-fitr, and for <br /> needy families, education,
@@ -319,16 +316,16 @@ import { SEO } from "astro-seo";
 
 
     <!-- faq started -->
-    <section class="text-center pt-36">
+    <section class="text-center md:pt-20 pt-10 px-6">
       <h2 class="text-3xl font-bold mb-6 text-center">
         Frequently Asked Questions
       </h2>
-      <h6>
+      <h6 class="pb-4">
         Explore our FAQs for clear insights on giving, eligibility, and the
         positive impact <br /> your contribution can make in transforming lives.
       </h6>
     </section>
-    <section class="section-sm container max-w-2xl">
+    <section class=" container max-w-2xl">
       <!-- ### Accordion -->
 
       <Accordion
